@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from "three"; // Import the Three.js library
 import { scene } from './initScene.js'; // Import the scene from the initialization script
 
 // Function to add lighting to the scene

@@ -1,5 +1,5 @@
-import * as THREE from 'three';
-import { camera, renderer, scene } from './initScene.js';
+import * as THREE from "three";
+import { camera, scene } from './initScene.js';
 
 const raycaster = new THREE.Raycaster(); // Raycaster for detecting intersections
 const mouse = new THREE.Vector2(); // Mouse position in normalized device coordinates
