@@ -13,10 +13,15 @@ if (!container) {    //Check for the existence of the container
     newContainer.id = 'scene-container';
     document.body.appendChild(newContainer);
 }
-// create a Scene with camera
+// create a Scene and set up its background.
 const scene = new THREE.Scene();
+scene.background = new THREE.Color('lightgray'); // Set the background color of the scene to light gray
+
+//Create a Perspective camera
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.set(0, 0, 0); // Adjust position as needed
+
+// Create a WebGL renderer
 const renderer = new THREE.WebGLRenderer({ antialias: true });  // Enable antialiasing for smoother edges
 renderer.setSize(window.innerWidth, window.innerHeight);  
 renderer.setPixelRatio(window.devicePixelRatio); // Set Pixel Ratio for better quality

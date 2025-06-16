@@ -1,6 +1,6 @@
 import { camera } from './initScene.js';
 
-let autoRotateSpeed = 0.01; // Speed of auto-rotation
+let autoRotateSpeed = 0.01; // Speed of camera auto-rotation
 
 // Function to animate the camera around the scene
 function updateCameraRotation() {

@@ -2,14 +2,6 @@
   /* remove margins and scroll bars */
   margin: 0;
   overflow: hidden;
-
-  /* style text */
-  text-align: center;
-  font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-
-  /*background color*/
-  background-color: #444;
 }
 
 h1 {
@@ -19,6 +11,7 @@ h1 {
 
   /* make sure that the heading is drawn on top */
   z-index: 1;
+  font-family: Arial, Helvetica, Sans-serif;
 }
 
 div #scene-container {
