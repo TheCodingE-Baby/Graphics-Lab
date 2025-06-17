@@ -1,8 +1,16 @@
-import * as THREE from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
+import {
+    Vector2,
+    Raycaster,
+    Scene,
+    WebGLRenderer,
+    PerspectiveCamera,
+    Color,
+    MeshBasicMaterial,
+}  from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
 import { camera, scene } from './initScene.js';
 
-const raycaster = new THREE.Raycaster(); // Raycaster for detecting intersections
-const mouse = new THREE.Vector2(); // Mouse position in normalized device coordinates
+const raycaster = new Raycaster(); // Raycaster for detecting intersections
+const mouse = new Vector2(); // Mouse position in normalized device coordinates
 
 // Function to handle mouse clicks
 window.addEventListener('click', (event) => {

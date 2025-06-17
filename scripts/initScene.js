@@ -1,5 +1,10 @@
-import * as THREE from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
-import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js'; // Use absolute path for HTTP GET
+import {
+    OrbitControls,
+    Scene,
+    WebGLRenderer,
+    PerspectiveCamera,
+    Color,
+} from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
 import { createProduct } from "./createProduct.js"; // Use absolute path for HTTP GET
 import  './addLighting.js'; // Import the function to add lighting
 import { updateCameraRotation } from './camerAnimation.js'; // Import the camera animation script
@@ -15,16 +20,16 @@ if (!container) {    //Check for the existence of the container
 }
 
 // create a Scene and set up its background.
-const scene = new THREE.Scene();
-scene.background = new THREE.Color('lightgray'); // Set the background color of the scene to light gray
+const scene = new Scene();
+scene.background = new Color('lightgray'); // Set the background color of the scene to light gray
 
 //Create a Perspective camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.set(0, 0, 0); // Adjust position as needed
 
 // Create a WebGL renderer
-const renderer = new THREE.WebGLRenderer({ antialias: true });  // Enable antialiasing for smoother edges
-renderer.setSize(window.innerWidth, window.innerHeight);  
+const renderer = new WebGLRenderer({ antialias: true });  // Enable antialiasing for smoother edges
+renderer.setSize(window.innerWidth, window.innerHeight);    
 renderer.setPixelRatio(window.devicePixelRatio); // Set Pixel Ratio for better quality
 renderer.setClearColor(0xf0f0f0); // Set background color as light gray
 document.body.appendChild(renderer.domElement); // Append the renderer to the container
