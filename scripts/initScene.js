@@ -1,9 +1,9 @@
-import * as THREE from "three";
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { createProduct} from './createProduct.js'; // Import the function to create the product model
+import * as THREE from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
+import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js'; // Use absolute path for HTTP GET
+import { createProduct } from "./createProduct.js"; // Use absolute path for HTTP GET
 import  './addLighting.js'; // Import the function to add lighting
 import { updateCameraRotation } from './camerAnimation.js'; // Import the camera animation script
-import '.interaction.js'; // Import the interaction script for mouse events
+import './interaction.js'; // Import the interaction script for mouse events
 
 //Let's insert a container for the 3D scene
 const container = document.querySelector('#scene-container'); // Create a container for the 3D scene

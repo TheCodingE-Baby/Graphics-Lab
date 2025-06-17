@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import * as THREE from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
 import { scene } from './initScene';
 
 //Let's insert a container for the 3D scene

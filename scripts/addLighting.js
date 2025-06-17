@@ -1,4 +1,4 @@
-import * as THREE from "three"; // Import the Three.js library
+import * as THREE from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
 import { scene } from './initScene.js'; // Import the scene from the initialization script
 
 // Function to add lighting to the scene

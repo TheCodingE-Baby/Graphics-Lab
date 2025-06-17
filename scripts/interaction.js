@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import * as THREE from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
 import { camera, scene } from './initScene.js';
 
 const raycaster = new THREE.Raycaster(); // Raycaster for detecting intersections
