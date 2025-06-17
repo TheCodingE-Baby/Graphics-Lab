@@ -13,6 +13,7 @@ if (!container) {    //Check for the existence of the container
     newContainer.id = 'scene-container';
     document.body.appendChild(newContainer);
 }
+
 // create a Scene and set up its background.
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('lightgray'); // Set the background color of the scene to light gray
