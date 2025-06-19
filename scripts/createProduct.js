@@ -1,19 +1,24 @@
 import {
+    BoxGeometry,
+    CylinderGeometry,
     Mesh,
     MeshStandardMaterial,
-    CylinderGeometry,
-    BoxGeometry,
+    Group
 } from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
-import { scene } from './initScene';
+import { scene } from './initScene.js';
 
 //Let's insert a container for the 3D scene
 const createProduct = () =>{        //This is a program for building a chair.
-    //Chair's Seat.
-    const seat= new Mesh(
+    
+    const chair= new Group(); // Create a group for the seat and backrest 
+    
+    //Chair's Seat
+    const seat = new Mesh(
         new BoxGeometry(1, 0, 0),
         new MeshStandardMaterial({color: 0x654221})
     );
     seat.position.y = 1;
+    chair.add(seat); // Add the seat to the chair group
 
     //Now the legs of the chair
     const legGeometry = new CylinderGeometry(0.1, 0.1, 1, 8)
@@ -31,6 +36,11 @@ const createProduct = () =>{        //This is a program for building a chair.
         scene.add(leg);
     });
     
-    scene.add(seat);
+    //Add chair to scene
+    scene.add(chair);
+
+    //Return the chair group for further manipulation if needed
+    return chair;
 };
 createProduct();
+export { createProduct }; // Export the createProduct function for use in other modules

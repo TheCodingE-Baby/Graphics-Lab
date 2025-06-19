@@ -1,11 +1,7 @@
 import {
     Vector2,
     Raycaster,
-    Scene,
-    WebGLRenderer,
-    PerspectiveCamera,
-    Color,
-    MeshBasicMaterial,
+    Color
 }  from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
 import { camera, scene } from './initScene.js';
 
@@ -27,9 +23,10 @@ window.addEventListener('click', (event) => {
     // If there are intersections, log the first one
     if (intersects.length > 0) {
         const ClickedObject = intersects[0].object; // Get the first intersected object
+        const originalColor = ClickedObject.material.color.clone(); // Clone the original color
         ClickedObject.material.color.setHex(0xff0000); // Change color to red
         setTimeout(() => {
-            ClickedObject.material.color.setHex(0x0077ff); // Change back to original color after 1 second
+            ClickedObject.material.color.copy(originalColor); // Change back to original color after 1 second
         }, 1000);
     }
 });

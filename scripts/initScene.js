@@ -1,18 +1,17 @@
 import {
-    OrbitControls,
     Scene,
     WebGLRenderer,
     PerspectiveCamera,
-    Color,
 } from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
+import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js'; // Import OrbitControls for camera manipulation
 import { createProduct } from "./createProduct.js"; // Use absolute path for HTTP GET
 import  './addLighting.js'; // Import the function to add lighting
 import { updateCameraRotation } from './camerAnimation.js'; // Import the camera animation script
 import './interaction.js'; // Import the interaction script for mouse events
 
 //Let's insert a container for the 3D scene
-const container = document.querySelector('#scene-container'); // Create a container for the 3D scene
-if (!container) {    //Check for the existence of the container
+const container = document.querySelector('#scene-container');  // Create a container for the 3D scene
+if (!container) {   //Check for the existence of the container
     // If the container does not exist, create a new one
     const newContainer = document.createElement('div');
     newContainer.id = 'scene-container';
@@ -21,7 +20,6 @@ if (!container) {    //Check for the existence of the container
 
 // create a Scene and set up its background.
 const scene = new Scene();
-scene.background = new Color('lightgray'); // Set the background color of the scene to light gray
 
 //Create a Perspective camera
 const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
