@@ -1,21 +1,12 @@
-// import {
-//     BoxGeometry,
-//     CylinderGeometry,
-//     Mesh,
-//     MeshStandardMaterial,
-//     Group
-// } from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
-// import { scene } from './initScene.js';
-
 //Let's insert a container for the 3D scene
 export function createProduct (){        //This is a program for building a chair.
 
-    const chair= new THREE.Group(); // Create a group for the seat and backrest
+    const chairgroup= new THREE.Group(); // Create a group for the seat and backrest
 
     //Chair's Seat
     const seat = new THREE.Mesh(
         new THREE.BoxGeometry(1, 0, 0),
-        new THREE.MeshStandardMaterial({color: 0x654221})
+        new THREE.MeshStandardMaterial({color: 0x654321})
     );
     seat.position.y = 1;
 
@@ -32,6 +23,6 @@ export function createProduct (){        //This is a program for building a chai
     }
     
     //Add all to group and return
-    chair.add(seat, ...legs); 
+    chairgroup.add(seat, ...legs); 
     return chair;
 }

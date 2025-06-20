@@ -34,4 +34,5 @@ export function setupInteraction (camera, scene, product){
         }, 1000);
     }
 });
+scene.add(setupInteraction);
 }
