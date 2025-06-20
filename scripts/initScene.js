@@ -27,8 +27,6 @@ const controls = new THREE.OrbitControls(camera, renderer.domElement)
 controls.enableZoom = true;
 controls.enablePan = false;
 
-
-
 //Add an event listener for window resize
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;

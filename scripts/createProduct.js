@@ -1,7 +1,7 @@
 //Let's insert a container for the 3D scene
 export function createProduct (){        //This is a program for building a chair.
 
-    const chairgroup= new THREE.Group(); // Create a group for the seat and backrest
+    const chair= new THREE.Group(); // Create a group for the seat and backrest
 
     //Chair's Seat
     const seat = new THREE.Mesh(
@@ -23,6 +23,6 @@ export function createProduct (){        //This is a program for building a chai
     }
     
     //Add all to group and return
-    chairgroup.add(seat, ...legs); 
+    chair.add(seat, ...legs); 
     return chair;
 }
