@@ -1,4 +1,4 @@
-//Let's insert a container for the 3D scene
+//Export the function createProduct to the initScene.js file
 export function createProduct() {
 
    const chair = new THREE.Group(); // Create a group for the seat and backrest
@@ -22,6 +22,7 @@ export function createProduct() {
         legs.push(leg);
     }
 
+    // The chair's backrest
     const backrest = new THREE.Mesh(
         new THREE.BoxGeometry(1, 1, 0.1),
         new THREE.MeshStandardMaterial({ color: 0x654321 })
