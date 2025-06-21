@@ -1,5 +1,5 @@
+//Export function to initScene.js
 export function setupCameraAnimation(camera, scene) {
-    // Initialize the camera animation
     let angle = 0; // Initial angle for camera rotation
     const radius = 5; // Radius of the circular path
     

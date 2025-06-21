@@ -1,7 +1,7 @@
 //Export the function createProduct to the initScene.js file
 export function createProduct() {
 
-   const chair = new THREE.Group(); // Create a group for the seat and backrest
+   const chair = new THREE.Group(); // Create a group for the seat, legs and backrest
 
     //Chair's Seat
     const seat = new THREE.Mesh(

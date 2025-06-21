@@ -1,3 +1,4 @@
+// Export the function to initScene.js
 export function setupInteraction (camera, scene, product){
 
     const raycaster = new THREE.Raycaster(); // Raycaster for detecting intersections
@@ -26,5 +27,6 @@ export function setupInteraction (camera, scene, product){
         }, 1000);
     }
 });
+//Add the interaction
 scene.add(setupInteraction);
 }

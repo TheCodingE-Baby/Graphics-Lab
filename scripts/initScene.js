@@ -40,5 +40,6 @@ function animate() {
 }
 animate(); // Start the animation loop
 
+//Other initializations
 setupCameraAnimation(camera, scene); // Initialize camera animation
 setupInteraction(renderer, scene, camera); // Initialize interaction handling
