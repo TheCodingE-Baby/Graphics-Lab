@@ -33,4 +33,3 @@ export function createProduct() {
     chair.add(seat, backrest, ...legs); 
     return chair;
 }
-
