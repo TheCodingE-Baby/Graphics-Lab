@@ -1,11 +1,11 @@
 //Let's insert a container for the 3D scene
-export function createProduct (){        //This is a program for building a chair.
+export function createProduct() {
 
-    const chair= new THREE.Group(); // Create a group for the seat and backrest
+   const chair = new THREE.Group(); // Create a group for the seat and backrest
 
     //Chair's Seat
     const seat = new THREE.Mesh(
-        new THREE.BoxGeometry(1, 0, 0),
+        new THREE.BoxGeometry(1, 0.2, 1),
         new THREE.MeshStandardMaterial({color: 0x654321})
     );
     seat.position.y = 1;
@@ -18,11 +18,18 @@ export function createProduct (){        //This is a program for building a chai
     const legs = [];
     for (let i = 0; i < 4; i++) {
         const leg = new THREE.Mesh(legGeometry, legMaterial);
-        leg.position.set((i % 2 === 0 ? -0.4 : 0.4), 0.5, (i < 2 ? -0.4 : 0.4));
+        leg.position.set((i % 2 === 0 ? -0.5 : 0.5), 0.5, (i < 2 ? -0.5 : 0.5));
         legs.push(leg);
     }
+
+    const backrest = new THREE.Mesh(
+        new THREE.BoxGeometry(1, 1, 0.1),
+        new THREE.MeshStandardMaterial({ color: 0x654321 })
+        ); 
+        backrest.position.set(0, 1.1, -0.5);
     
     //Add all to group and return
-    chair.add(seat, ...legs); 
+    chair.add(seat, backrest, ...legs); 
     return chair;
 }
+

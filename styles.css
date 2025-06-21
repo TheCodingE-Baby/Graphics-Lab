@@ -8,13 +8,13 @@ h1 {
   /* position the heading */
   position: absolute;
 
-  /* make sure that the heading is drawn on top */
+  /* determine the font size and family */
   font-family: Arial, Helvetica, Sans-serif;
 }
 
 div#scene-container {
-  /* tell our scene container to take up the full page */
-  width: 75%;
+  /* tell our scene container to take up a very small ortion */
+  width: 35%;
   height: 200px;
   background-color: lightgray;
 }

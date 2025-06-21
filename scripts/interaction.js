@@ -1,15 +1,7 @@
-// import {
-//     Vector2,
-//     Raycaster,
-//     Color
-// }  from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
-// import { camera, scene } from './initScene.js';
-
 export function setupInteraction (camera, scene, product){
 
     const raycaster = new THREE.Raycaster(); // Raycaster for detecting intersections
     const mouse = new THREE.Vector2(); // Mouse position in normalized device coordinates
-
     const highlighMaterial = new THREE.MeshStandardMaterial({ color: 0xff0000 });// Function to handle mouse clicks
 
 

@@ -1,9 +1,3 @@
-// import{
-//     AmbientLight,
-//     DirectionalLight
-// }from '../node_modules/three/build/three.module.js'; // Use absolute path for HTTP GET
-// import { scene } from './initScene.js'; // Import the scene from the initialization script
-
 // Function to add lighting to the scene
 export function addLighting(scene) {
    const createAmbientLight = new THREE.AmbientLight(0xffffff, 0.5); // Soft white light
